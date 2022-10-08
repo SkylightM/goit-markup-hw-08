@@ -1,0 +1,166 @@
+.main-header--border-line{
+    border-bottom: 1px solid $mainBorderLine;
+}
+.page-header{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__logo{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 24px;
+        line-height: 1.2;
+        color: $brandColor;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+            &--second-part{
+                font-size: 24px;
+                line-height: 1.2;
+                color: $logoSecondPartHeader;
+                font-family: "Raleway", sans-serif;
+                font-weight: 700;
+            }
+    }
+}
+.js-open-menu{
+    padding-left: 276px;
+}
+.navigation{
+    visibility: hidden;
+    position: absolute;
+}
+.contact-header{
+    visibility: hidden;
+    position: absolute;
+}
+@media screen and (min-width: 768px) {
+        .menu-toggle,
+        .menu {
+            display: none;
+        }
+        .page-header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+                &__logo {
+                    padding-top: 24px;
+                    padding-bottom: 25px;
+                    padding-right: 0;
+                    font-size: 26px;
+                    line-height: 1.2;
+                    color: $brandColor;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: 700;
+                    text-decoration: none;
+        
+                    &--second-part {
+                        font-size: 26px;
+                        line-height: 1.2;
+                        color: $logoSecondPartHeader;
+                        font-family: "Raleway", sans-serif;
+                        font-weight: 700;
+                    }
+                }
+            }
+        .js-open-menu{
+            visibility: hidden;
+            position: absolute;
+        }
+        .navigation {
+            position: static;
+            visibility: visible;
+            display: flex;
+            gap: 46px;
+            padding-left: 93px;
+            flex-direction: row;
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.14;
+            font-weight: 500;
+            color: $navigationColor;
+            
+                &__link {
+                    text-decoration: none;
+                    color: $navigationLink;
+            
+                        &:hover,
+                        :focus {
+                            cursor: pointer;
+                            color: $brandColor;
+                            transition-property: color, fill, cursor;
+                            transition-duration: 250ms;
+                            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+                &--active-site {
+                    position: relative;
+            
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: $brandColor;
+                    left: 0;
+                    bottom: -32px;
+                    display: inline-block;
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 2px;
+                            }
+        }
+     }
+ }
+                                                  .contact-header {
+                                                    position: static;
+                                                    visibility: visible;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    gap: 10px;
+                                                    padding-left: 101px;
+                        
+                                                    &__link {
+                                                        font-size: 14px;
+                                                        line-height: 1.14;
+                                                        font-weight: 500;
+                                                        fill: $contactColor;
+                                                        display: flex;
+                                                        text-decoration: none;
+                                                        color: $contactColor;
+                        
+                                                        &--spacing {
+                                                            letter-spacing: 2px;
+                                                        }
+                        
+            &:hover,
+            :focus {
+                cursor: pointer;
+                color: $brandColor;
+                fill: $brandColor;
+                transition-property: color, fill, cursor;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+            }
+                        
+            &__icon-letter {
+                margin-right: 10px;
+            }
+                        
+            &__icon-phone {
+                margin-right: 4px;
+            }
+       }
+    }
+    @media screen and (min-width: 1200px) {
+        .contact-header{
+            padding-left: 345px;
+            flex-direction: row;
+            padding-right: 0;
+            &__link{
+            &--spacing{
+                padding-left: 30px;
+                }}
+            }
+        }

@@ -1,0 +1,202 @@
+.container-footer {
+    background-color: $footerBgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.page-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__logo {
+        font-size: 24px;
+        line-height: 1.2;
+        color: $brandColor;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        &--second-part {
+            font-size: 24px;
+            line-height: 1.2;
+            color: $classicSecondFont;
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+        }
+    }
+    &__address {
+        font-size: 14px;
+        line-height: 1.71;
+        font-weight: 400;
+        color: $classicSecondFont;
+        padding-bottom: 8px;
+    }
+    &__contact {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        padding-bottom: 60px;
+    }
+    &__link {
+        font-size: 14px;
+        line-height: 1.14;
+        font-weight: 400;
+        color: $footerLink;
+        text-decoration: none;
+    }
+}
+.join-us {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+    &__title {
+        color: $joinUsTitle;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.14;
+        padding-bottom: 20px;
+    }
+    &__icons {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 60px;
+    }
+    &__icon {
+        width: 44px;
+        height: 40px;
+        fill: $joinUsIcon;
+        background-color: $joinUsBg;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            background-color: $brandColor;
+            cursor: pointer;
+            transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+}
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    &__text {
+        color: $newsletterText;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.17;
+        padding-bottom: 20px;
+    }
+    &__input {
+        width: 450px;
+        background-color: $newsletterInputBg;
+        height: 50px;
+        border-radius: 4px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border: 1px solid $newsletterInputBorder;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+        color: white;
+        &::placeholder {
+            color: $newsletterPlaceholder;
+            padding-left: 16px;
+        }
+    }
+    &__button {
+        width: 200px;
+        height: 50px;
+        background-color: $brandColor;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: transparent;
+        color: $newsletterBtn;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.87;
+        letter-spacing: 0.06em;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container-footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .page-footer{
+        padding-right: 144px;
+    }
+    .newsletter{
+        &__label{
+            width: 768px;
+            flex-wrap: nowrap;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container-footer{
+        align-items: flex-start;
+    }
+    .page-footer{
+        align-items: flex-start;
+        padding-right: 72px;
+        padding-top: 60px;
+        &__logo{
+            padding-top: 0;
+        }
+    }
+    .join-us{
+        padding-top: 72px;
+        padding-right: 78px;
+        align-items: flex-start;
+        &__icons{
+            padding-bottom: 0;
+        }
+        
+    }
+    .newsletter{
+        align-items: flex-start;
+        flex-direction: row;
+        &__label{
+            width: auto;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        &__text{
+            padding-top: 72px;
+        }
+        &__input{
+            width: 358px;
+        }
+        &__button{
+            margin-top: 0;
+            margin-top: 108px;
+            margin-left: 12px;
+        }
+    }
+}

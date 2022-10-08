@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin: auto;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+p {
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+button {
+    cursor: pointer;
+}
+$brandColor: #2196F3;
+$classicFont: black;
+$classicSecondFont: white;
+$mainBorderLine: #ECECEC;
+$logoSecondPartHeader: black;
+$navigationColor: black;
+$navigationLink: black;
+$contactColor: #757575;
+$mainTitle: white;
+$mainBtn: white;
+$loremBgColor: #F5F4FA;
+$loremDescription: #757575;
+$loremText: black;
+$companyBgTitle: rgba(47, 48, 58, 0.8);
+$teamMemberTitle: #757575;
+$teamCardIcons: #AFB1B8;
+$teamCardIconHover: white;
+$companyIcon: #AFB1B8;
+$companyTitle: black;
+$companyTitles: white;
+$footerBgColor: #2F303A;
+$footerLink: rgba(255, 255, 255, 0.6);
+$joinUsTitle: white;
+$joinUsIcon: white;
+$joinUsBg: rgba(255, 255, 255, 0.1);
+$newsletterText: white;
+$newsletterInputBg: #2F303A;
+$newsletterInputBorder: rgba(255, 255, 255, 0.3);
+$newsletterPlaceholder: rgba(255, 255, 255, 0.6);
+$newsletterBtn: white;
+$portfolioBtnColor: black;
+$portfolioBtnBg: #F5F4FA;
+$portfolioBtnHover: white;
+$galleryTitle: black;
+$galleryOverlayBg: rgba(33, 150, 243, 0.9);
+$galleryOverlayColor: white;
+$galleryDescription: grey;
+$galleryDescriptionBg: white;
+$galleryDescriptionBorder: #EEEEEE;
+$backdropBg: rgba(0, 0, 0, 0.2);
+$backdropModalBg: white;
+$backdropCloseBtnBg: white;
+$formInputBorder: rgba(33, 33, 33, 0.2);
+$formInputFocus: #2196F3;
+$formInputPlaceholder: rgba(117, 117, 117, 0.5);
+$formSpan: #757575;
+$formIconCheckbox: white;
+$formTitle: #757575;
+$formBtn: white;
+

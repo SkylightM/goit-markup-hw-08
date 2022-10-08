@@ -1,0 +1,115 @@
+.section-team{
+    background: #F5F4FA;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.container-team {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    &__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        width: 450px;
+        height: 622px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 30px 30px 16px 30px;
+        font-size: 16px;
+        line-height: 1.18;
+        font-weight: 400;
+        color: $teamMemberTitle;
+    }
+
+    &__member {
+        font-size: 16px;
+        line-height: 1.18;
+        font-weight: 500;
+        color: $classicFont;
+    }
+
+    &--heading {
+        font-size: 36px;
+        line-height: 1.16;
+        font-weight: 700;
+        color: $classicFont;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+.team__card figure img{
+    width: 450px;
+    height: 460px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 30px;
+    fill: $teamCardIcons;
+    list-style: none;
+
+    &__icon {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover,
+        &:focus {
+            fill: $teamCardIconHover;
+            background-color: $brandColor;
+            border-radius: 50%;
+            cursor: pointer;
+            transition-property: background-color, fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .team{
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__card{
+            width: 354px;
+            height: 536px;
+        }
+    }
+    .team__card figure img{
+        width: 354px;
+        height: 374px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .team{
+        &__card{
+            width: 270px;
+            height: 428px;
+        }
+    }
+    .team__card figure img{
+        width: 270px;
+        height: 260px;
+    }
+}

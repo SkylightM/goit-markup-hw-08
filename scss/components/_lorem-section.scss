@@ -1,0 +1,86 @@
+.container-lorem {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 480px;
+}
+
+.lorem-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    &__text {
+        font-size: 14px;
+        line-height: 1.14;
+        font-weight: 700;
+        color: $loremText;
+        text-align: center;
+        padding-top: 30px;
+
+        &--description {
+            font-size: 14px;
+            line-height: 1.71;
+            font-weight: 400;
+            color: $loremDescription;
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &__icon {
+        width: 450px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $loremBgColor;
+        border-radius: 4px;
+        margin: 0;
+        padding-left: 15px;
+
+    }
+}
+@media screen and (min-width: 768px) {
+    .container-lorem{
+        width: 768px;
+    }
+    .lorem-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        flex-basis: calc((100% - 30px) / 2);
+        &__element{
+            width: 354px;
+        }
+        &__icon{
+            width: 354px;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container-lorem{
+        padding-top: 94px;
+        padding-bottom: 94px;
+        width: 1200px;
+    }
+    .lorem-list{
+        flex-wrap: nowrap;
+        &__element{
+            width: 270px;
+        }
+        &__text{
+            text-align: left;
+            padding-bottom: 10px;
+            &--description{
+                padding: 0;
+            }
+        }
+        &__icon{
+            width: 270px;
+        }
+    }
+}

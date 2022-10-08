@@ -1,0 +1,89 @@
+.images-portfolio-section {
+    padding: 0;
+    padding-bottom: 94px;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+
+        &:hover .portfolio__overlay {
+            transform: translateY(0);
+            transition-property: transform, color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+    &__image {
+        width: 450px;
+        height: 294px;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+        display: inline-block;
+        padding-left: 24px;
+        padding-top: 49px;
+        padding-right: 45px;
+        background-color: $galleryOverlayBg;
+        color: $galleryOverlayColor;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.55;
+        cursor: pointer;
+        transition-property: transform, color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 1.87;
+        font-weight: 400;
+        color: $galleryDescription;
+        background-color: $galleryDescriptionBg;
+        position: relative;
+        z-index: 3;
+        border: 1px solid $galleryDescriptionBorder;
+        border-top: 0;
+        padding: 20px;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 2;
+        font-weight: 700;
+        color: $galleryTitle;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 768px) {
+    .portfolio{
+        &__image{
+            width: 354px;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .portfolio{
+        margin: auto;
+            flex-basis: calc((100% - 60px) / 3);
+            width: 1200px;
+        &__image{
+            width: 370px;
+        }
+    }
+}
