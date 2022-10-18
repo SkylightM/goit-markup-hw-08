@@ -25,9 +25,6 @@
             }
     }
 }
-.js-open-menu{
-    
-}
 
 .navigation{
     visibility: hidden;
@@ -37,7 +34,16 @@
     visibility: hidden;
     position: absolute;
 }
+.nav{
+    display: none;
+}
+.js-open-menu{
+    padding-right: 10px;
+}
 @media screen and (min-width: 768px) {
+        .nav{
+            display: block;
+        }
         .menu-toggle,
         .menu {
             display: none;
