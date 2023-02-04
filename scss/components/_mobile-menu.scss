@@ -24,12 +24,10 @@
 }
 
 .js-close-menu {
+    position: absolute;
     border: 0;
     font-size: 18px;
     font-weight: 700;
-    margin-top: 21px;
-    margin-left: 396px;
-    margin-right: 25.33px;
     cursor: pointer;
     &:hover,
     &:focus{
@@ -115,6 +113,7 @@
 
 .menu__socials {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     list-style: none;
 }

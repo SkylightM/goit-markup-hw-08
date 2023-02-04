@@ -1,11 +1,9 @@
 .company{
-    visibility: hidden;
-    position: absolute;
+    display: none;
 }
 @media screen and (min-width: 1200px) {
     .company{
-        position: relative;
-        visibility: visible;
+        display: block;
         padding: 0;
             padding-bottom: 94px;
             display: flex;
