@@ -18,7 +18,8 @@
     }
 
     &__input {
-        width: 370px;
+        max-width: 370px;
+        width: auto;
         height: 40px;
         border: 1px solid $formInputBorder;
         border-radius: 4px;
@@ -35,7 +36,8 @@
     }
 
     &__input--comment {
-        width: 370px;
+        max-width: 370px;
+        width: auto;
         height: 120px;
         resize: none;
         border: 1px solid $formInputBorder;
@@ -56,6 +58,10 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
         gap: 4px;
 
         &:focus-within {
@@ -77,7 +83,7 @@
     &__icon {
         position: absolute;
         display: inline-block;
-        left: 15px;
+        left: 54.27px;
         top: 32px;
 
         &:focus-within {
@@ -106,7 +112,7 @@
     }
 
     &__icon-check {
-        position: absolute;
+        position: static;
         bottom: 120px;
         left: 40px;
         border: 2px solid black;
